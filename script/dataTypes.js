@@ -53,6 +53,12 @@ const NUMBER_OF_MONTH = 2;
 let interestAmount = (deposit * INTEREST_RATE / 12) * NUMBER_OF_MONTH;
 console.log(`The monetary amount of interest on the deposit for ${NUMBER_OF_MONTH} months is ${interestAmount.toFixed(2)} UAH.`);
 
+//Ставка ПДФО на доходи у вигляді процентів на поточний або депозитний (вкладний) банківський рахунок встановлюються у розмірі 18 % до бази оподаткування. 
+//Такі доходи також є об'єктом оподаткування військовим збором за ставкою 1,5 %.
+
+interestAmount *= (1 - 0.195);
+console.log(`The amount including income tax is ${interestAmount.toFixed(2)} UAH.`)
+
 // Що повернуть вираження:
 
 console.log(2 && 0 && 3); 
