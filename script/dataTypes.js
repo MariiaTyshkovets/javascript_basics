@@ -25,7 +25,7 @@ let priceOfChocolate = prompt("Enter the price of chocolate (in UAH).");
 if (+moneyInWallet > +priceOfChocolate) {
     let numberOfChocolates = Math.floor(moneyInWallet / priceOfChocolate);
     let rest = moneyInWallet % priceOfChocolate;
-    console.log(`For ${moneyInWallet} UAH you can buy ${numberOfChocolates} chocolates and ${rest} UAH the rest will remain.`);
+    console.log(`For ${moneyInWallet} UAH you can buy ${numberOfChocolates} chocolates and ${rest.toFixed(2)} UAH the rest will remain.`);
 } else if (+moneyInWallet == +priceOfChocolate) {
     console.log(`For ${moneyInWallet} UAH you can buy one chocolate bar.`);
 } else {
