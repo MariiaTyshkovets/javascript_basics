@@ -195,7 +195,7 @@ do {
     isNum = isNatural(naturalNumber);
 } while (isNum == false);
 
-isPerfectNumber(naturalNumber) == true ? console.log(`The number ${naturalNumber} is perfect.`) : console.log(`The number ${naturalNumber} is not perfect.`);
+isPerfectNumber(naturalNumber) ? console.log(`The number ${naturalNumber} is perfect.`) : console.log(`The number ${naturalNumber} is not perfect.`);
 
 // 2. Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, 
 // і виводить тільки ті числа з діапазону, які є досконалими. 
