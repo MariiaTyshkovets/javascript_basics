@@ -129,11 +129,13 @@ productAdd = (productName) => {
     for (let i = 0; i < shopingList.length; i++) {
         if (shopingList[i].name == productName && shopingList[i].bought == false) {
             shopingList[i].quantity = shopingList[i].quantity + +productQuantity;
-            return console.log(`The ${productName} is already on the shopping list. Their number has increased by ${productQuantity}.`);
+            console.log(`The ${productName} is already on the shopping list. Their number has increased by ${productQuantity}.`);
+            return `${productName} added.`;
         } else if (shopingList[i].name == productName && shopingList[i].bought == true) {
             shopingList[i].quantity = +productQuantity;
             shopingList[i].bought = false;
-            return console.log(`You have already bought ${productName}. You will need to buy ${productQuantity} more.`);
+            console.log(`You have already bought ${productName}. You will need to buy ${productQuantity} more.`);
+            return `${productName} added.`;
         }
     }
     
@@ -143,7 +145,8 @@ productAdd = (productName) => {
     } while (check == false)
 
     shopingList.push(new Product(productName, +productQuantity, false, +productPriceUnit));
-    return console.log(`New product ${productName} added to shopping list.`)
+    console.log(`New product ${productName} added to shopping list.`);
+    return `${productName} added.`;
 }
 
 productAdd('orange');
