@@ -1,0 +1,54 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.task-1 {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.display-none {
+    display: none;
+}
+
+.table {
+    width: max-content;
+    margin: 50px auto;
+    border: 1px solid slategray;
+}
+
+.table th {
+    padding: 0 15px;
+}
+
+.table td {
+    text-align: center;
+    border: 1px solid slategray;
+}
+
+.table .name {
+    text-align: left;
+    padding: 0 10px;
+}
+
+.text-with-border {
+    margin: 0 auto;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid darkblue;
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 5px solid transparent; 
+    border-right: 5px solid darkblue; 
+    border-bottom: 5px solid darkblue;
+    cursor: pointer;
+}
