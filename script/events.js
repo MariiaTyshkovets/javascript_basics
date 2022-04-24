@@ -50,17 +50,21 @@ const compareCellValues = (cellValue1, cellValue2) => {
 };
 
 const compareFnFactory = (columnIndex, ascending) => (firstEl, secondEl) => {
+    console.log('inside compareFnFactory =', ascending);
     const cellValue1 = getCellValueInColumn(firstEl, columnIndex);
     const cellValue2 = getCellValueInColumn(secondEl, columnIndex);
     return ascending ? compareCellValues(cellValue2, cellValue1) : compareCellValues(cellValue1, cellValue2);
 };
 
 document.querySelectorAll("th").forEach((th) => {
-    th.addEventListener("click", () => {
+    console.log('th =', th);
+    th.addEventListener("click", function () {
         const table = th.closest("table");
         const tbody = table.querySelector("tbody");
         const columnIndex = Array.from(th.parentNode.children).indexOf(th);
-        const compareFn = compareFnFactory(columnIndex, (this.ascending == !this.ascending));
+        console.log('columnIndex =', columnIndex);
+        console.dir('th inside listener =', this.ascending);
+        const compareFn = compareFnFactory(columnIndex, (this.ascending = !this.ascending));
         Array.from(tbody.querySelectorAll("tr")).sort(compareFn).forEach((tr) => tbody.appendChild(tr));
     })
 });
